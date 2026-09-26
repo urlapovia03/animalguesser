@@ -34,12 +34,6 @@
 
 > ⚠️ **Методологическое замечание.** Т.к. `Testing_set_animals.csv` не содержит реальных меток, метрики получены на отложенной части `train` (20%, `random_state=42`), а не на официальном тестовом наборе. Проверка на другом сиде (`random_state=123`) показала стабильность результата EfficientNetB4 (F1 = 0.9957), но заметный разброс у CNN+BN+Dropout (F1 от 0.7727 до 0.9203) — вероятный признак того, что при исходном обучении этой модели не было честного отложенного holdout. Метрики CNN+BN+Dropout стоит интерпретировать с этой оговоркой.
 
-### Визуализации результатов
-
-![Сравнение метрик качества](images/metrics_comparison.png)
-![Матрицы ошибок](images/confusion_matrices.png)
-
-> Как добавить эти картинки: в ноутбуке перед `plt.show()` для соответствующих графиков добавь `plt.savefig('metrics_comparison.png', dpi=150, bbox_inches='tight')` (и аналогично для матриц ошибок), скачай файлы и положи в папку `images/` этого репозитория.
 
 ## 🗂️ Структура проекта
 
@@ -79,7 +73,7 @@ pip install -r requirements.txt
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
-Проверка: открой http://localhost:8000 — должен вернуться `{"status": "ok", "model_loaded": true}`.
+Проверка: открыть http://localhost:8000 — должен вернуться `{"status": "ok", "model_loaded": true}`.
 
 ### 2. Frontend (Streamlit)
 
@@ -90,8 +84,6 @@ python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
-
-Перед локальным запуском поправь в `app.py` адрес API на локальный:
 
 ```python
 API_URL = "http://localhost:8000/predict"
