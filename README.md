@@ -62,9 +62,9 @@ requirements.txt  — зависимости frontend
 
 - **Backend / публичный API:** https://render-pr10.onrender.com
   - Swagger-документация: https://render-pr10.onrender.com/docs
-- **Frontend / Streamlit-интерфейс:** `<ССЫЛКА_НА_STREAMLIT_APP>`
-- **GitHub — backend:** `<ССЫЛКА_НА_BACKEND_РЕПОЗИТОРИЙ>`
-- **GitHub — frontend:** `<ССЫЛКА_НА_FRONTEND_РЕПОЗИТОРИЙ>`
+- **Frontend / Streamlit-интерфейс:** `https://frontend-pr10-ag9wbx58dtrz7zhbz3cj6n.streamlit.app/`
+- **GitHub — backend:** `<https://github.com/urlapovia03/backend-pr10>`
+- **GitHub — frontend:** `<https://github.com/urlapovia03/frontend-pr10>`
 
 ## 🛠️ Локальное развёртывание
 
